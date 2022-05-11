@@ -7,6 +7,7 @@ use App\Models\ExcepcionModel;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\ResponseInterface;
 use DateTime;
+use PHPUnit\Framework\Constraint\IsEmpty;
 
 class Excepcion extends BaseController
 {
@@ -34,9 +35,10 @@ class Excepcion extends BaseController
 		if (!$this->validateRequest($input, $rules)) {
 			return $this->getResponse($this->validator->getErrors(), ResponseInterface::HTTP_BAD_REQUEST);
 		}
+		$response = $excepcionModel->findFuncionarioByDate($fecha1, $fecha2);
 		return $this->getResponse([
 			'message' => 'Consulta de todos las expceciones correctamente',
-			'excepciones' => $excepcionModel->findFuncionarioByDate($fecha1, $fecha2)
+			'excepciones' => $response
 		], ResponseInterface::HTTP_OK);
 	}
 

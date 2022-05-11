@@ -18,11 +18,7 @@ class ExcepcionModel extends Model
     {
         $db = db_connect('excepcion');
         $query = 'SELECT id, descripcion, codigo, fecha_generacion FROM prb_excepcion WHERE fecha_generacion >= ? and fecha_generacion <= ? ';
-        $excepciones = $db->query($query, [$fecha1, $fecha2])->getResult();
-            
-        if (!$excepciones) {
-            throw new \Exception('No existen excepciones para esta consulta.');
-        }
+        $excepciones = $db->query($query, [$fecha1, $fecha2])->getResult();            
         return $excepciones;
     }
 }

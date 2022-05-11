@@ -35,6 +35,8 @@ export default {
   name: "Excepcion",
   data() {
     return {
+      fecha_1: "",
+      fecha_2: "",
       excepciones: [],      
     };
   },
