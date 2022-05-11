@@ -17,3 +17,11 @@ Para ejecutar el aplicativo se debe instalar Mysql 5.6 con un servidor apache co
  - Ejecutar el comando: npm install
  - Ejecutar el siguiente comando para iniciar la aplicación vue.js: npm run serve (No cerrar)
  - Al terminar debe dirigirse al explroador web e ingrear al siguiente enlace: http://localhost:8081/ donde podra hacer uso de la aplicación.
+
+Los servicios se pueden testear en postman por medio de las siguientes url:
+ - Generación de tokens: http://localhost:8080/auth/generate
+ - Consulta de todos los datos ingresados en el formulario: http://localhost:8080/funcionario
+ - Creación de nuevo registro de formulario: http://localhost:8080/funcionario/store
+ - Consulta de todas las excepciones: http://localhost:8080/excepcion/
+ - Creación de nuevo registro de expceciones: http://localhost:8080/excepcion/store
+ - Consulta de las excepciones filtradas por fecha: http://localhost:8080/excepcion/filterDate
