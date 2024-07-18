@@ -1,4 +1,4 @@
-# Prueba Full Stack
+# Full Stack
 
 Para ejecutar el aplicativo se debe instalar Mysql 5.6 con un servidor apache con la versión PHP 7.2:
 
